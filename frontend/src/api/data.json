@@ -1,0 +1,111 @@
+{
+  "buildings": [
+    {
+      "id": "b1",
+      "name": "Sunrise Residency",
+      "address": "Sector 12, Mumbai",
+      "join_code": "SUN123"
+    }
+  ],
+
+  "users": [
+    {
+      "id": "u1",
+      "building_id": "b1",
+      "name": "Rahul Sharma",
+      "email": "rahul@example.com",
+      "phone": "9876543210",
+      "avatar_url": "/avatars/u1.png",
+      "role": "member"
+    },
+    {
+      "id": "u2",
+      "building_id": "b1",
+      "name": "Priya Singh",
+      "email": "priya@example.com",
+      "phone": "9823456789",
+      "avatar_url": "/avatars/u2.png",
+      "role": "member"
+    },
+    {
+      "id": "u3",
+      "building_id": "b1",
+      "name": "Rohan Kumar",
+      "email": "rohan@example.com",
+      "phone": "9000000000",
+      "avatar_url": "/avatars/u3.png",
+      "role": "admin"
+    }
+  ],
+
+  "tasks": [
+    {
+      "id": "t1",
+      "building_id": "b1",
+      "owner_id": "u1",
+      "title": "Need help fixing a leaking tap",
+      "description": "There is a small leak in the kitchen tap. Need someone to take a look.",
+      "location": "Flat 302",
+      "category": "plumbing",
+      "budget": 150,
+      "status": "open",
+      "due_at": null,
+      "created_at": "2025-01-01T10:00:00Z"
+    },
+    {
+      "id": "t2",
+      "building_id": "b1",
+      "owner_id": "u2",
+      "title": "Need grocery pickup",
+      "description": "Looking for someone to pick up basic groceries from the store.",
+      "location": "Flat 210",
+      "category": "delivery",
+      "budget": 50,
+      "status": "accepted",
+      "accepted_by": "u1",
+      "due_at": null,
+      "created_at": "2025-01-02T14:00:00Z"
+    }
+  ],
+
+  "task_assignments": [
+    {
+      "id": "a1",
+      "task_id": "t2",
+      "user_id": "u1",
+      "status": "accepted",
+      "proposed_at": "2025-01-02T14:10:00Z",
+      "accepted_at": "2025-01-02T14:11:00Z"
+    }
+  ],
+
+  "messages": [
+    {
+      "id": "m1",
+      "task_id": "t2",
+      "sender_id": "u1",
+      "content": "Hey, I can help with the groceries!",
+      "attachments": [],
+      "created_at": "2025-01-02T14:15:00Z"
+    },
+    {
+      "id": "m2",
+      "task_id": "t2",
+      "sender_id": "u2",
+      "content": "Great! Please pick up bread and milk.",
+      "attachments": [],
+      "created_at": "2025-01-02T14:16:00Z"
+    }
+  ],
+
+  "notifications": [
+    {
+      "id": "n1",
+      "user_id": "u2",
+      "type": "task_accepted",
+      "payload": { "task_id": "t2", "accepted_by": "u1" },
+      "is_read": false,
+      "created_at": "2025-01-02T14:11:00Z"
+    }
+  ]
+}
