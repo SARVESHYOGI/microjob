@@ -11,27 +11,31 @@ import Register from "./pages/auth/Register";
 import Chat from "./pages/Chat";
 import Notification from "./pages/Notification";
 import Admin from "./pages/Admin";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className=" min-h-screen">
-      <Routes>
-        <Route path="/" element={<Home />} />
+      <Navbar />
+      <div className="mx-auto w-[80%] min-h-screen ">
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route path="/requests" element={<AllRequest />} />
-        <Route path="/myrequests" element={<MyRequest />} />
-        <Route path="/addrequests" element={<AddRequest />} />
-        <Route path="/request/:id" element={<SpecificRequest />} />
+          <Route path="/requests" element={<AllRequest />} />
+          <Route path="/myrequests" element={<MyRequest />} />
+          <Route path="/addrequests" element={<AddRequest />} />
+          <Route path="/request/:id" element={<SpecificRequest />} />
 
-        <Route path="/auth/login" element={<Login />} />
-        <Route path="/auth/register" element={<Register />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/register" element={<Register />} />
 
-        <Route path="/chat" element={<Chat />} />
-        <Route path="/notifications" element={<Notification />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/notifications" element={<Notification />} />
 
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/profile/admin" element={<Admin />} />
-      </Routes>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/admin" element={<Admin />} />
+        </Routes>
+      </div>
     </div>
   );
 }
